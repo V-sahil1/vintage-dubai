@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#121316;color:#e3e2e6;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#574500", "primary-fixed": "#ffe088", "outline": "#99907c", "secondary": "#c1c7cf", "on-surface": "#e3e2e6", "on-error-container": "#ffdad6", "primary-fixed-dim": "#e9c349", "inverse-on-surface": "#303034", "primary": "#f2ca50", "on-primary": "#3c2f00", "on-tertiary-fixed": "#241a00", "surface-container-high": "#292a2d", "on-tertiary": "#3d2e00", "surface-dim": "#121316", "error": "#ffb4ab", "secondary-fixed-dim": "#c1c7cf", "tertiary-container": "#d0af56", "on-secondary-fixed": "#161c22", "surface-container-highest": "#343538", "on-primary-fixed": "#241a00", "surface": "#121316", "surface-container-low": "#1b1b1f", "inverse-primary": "#735c00", "surface-tint": "#e9c349", "on-secondary-fixed-variant": "#41474e", "on-secondary-container": "#afb6bd", "on-tertiary-fixed-variant": "#584400", "on-background": "#e3e2e6", "on-error": "#690005", "surface-container-lowest": "#0d0e11", "surface-container": "#1f1f23", "tertiary-fixed": "#ffe08f", "on-tertiary-container": "#564200", "on-secondary": "#2b3137", "on-surface-variant": "#d0c5af", "tertiary": "#edcb6f", "secondary-fixed": "#dde3eb", "primary-container": "#d4af37", "error-container": "#93000a", "surface-variant": "#343538", "tertiary-fixed-dim": "#e5c368", "inverse-surface": "#e3e2e6", "background": "#121316", "surface-bright": "#38393c", "on-primary-container": "#554300", "secondary-container": "#41474e", "outline-variant": "#4d4635" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "4rem" }, "fontFamily": { "display-xl-mobile": ["Syne"], "label-spec": ["Space Mono"], "headline-sm": ["Syne"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Syne"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Syne"], "display-xl": ["Syne"], "headline-md-mobile": ["Syne"], "label-badge": ["Space Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Syne"] }, "fontSize": { "display-xl-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-spec": ["13px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs"><img alt="Brand logo. - Primary color: #d4af37
+- Font: syne
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U0a1a5MLDIaG45JjLuQr-P-Ab387ZPdyFnI1kQAr01_B4NvgpVsIko6u_YF6r3YkpmRjJxpEHBampsFpH5UDwCJJLHFxlWR_UbO39z5P_GZmLQsb4JWuRm2yLxIILYL6QyjFUTU8Cq4l2fwWv8sA9M3sgE2PhHsA8U0HIkrTrloyfJLcNk0m9mxs4pSxRStT6y8IytD5IK8cwYJqUlFenZXzM1DE52Y_ZmXcYg-Rr14svKHPBebQtEk1A"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] leading-tight font-semibold tracking-tight uppercase text-on-surface">VANTAGE</span><span class="font-label-badge text-[9px] uppercase tracking-widest text-primary">DUBAI</span></div></div></div><div class="flex items-center gap-space-xs"><a aria-label="WhatsApp Concierge" class="w-11 h-11 flex items-center justify-center text-primary hover:text-primary-fixed transition-colors" href="https://wa.me/97140000000"><span class="material-symbols-outlined text-[22px]">chat</span></a><a aria-label="Call Concierge" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="tel:+97140000000"><span class="material-symbols-outlined text-[22px]">call</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest">
+<div class="relative w-full h-[520px] bg-cover bg-center flex flex-col justify-end p-margin-mobile" data-alt="A cinematic luxury supercar showroom on Sheikh Zayed Road Dubai at twilight with warm architectural linear lights reflecting on ultra-glossy black marble floor, displaying Aston Martin Valkyrie and orange McLaren supercar against the illuminated Burj Khalifa and downtown Dubai skyscraper skyline." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdCkFFOqamKhKh-mgFxmaRJjYtIbzwhwwxSYih5gyBPwS1KQd85bq2HdnykAxK_WzuSXyIcQy5YviYPnxqFC0LhDEmxmirxUSFyClvCXkoYxa4ySy403WinNRDCqWD9BdcZM5arJBTj39mGltgmEUYDBqwntsWemx-zNLKMVRPfMnraVjz3yLVED_vPwsgFRSx2eVTwHVn5dFAsJE3Alv8YuvVnkYzYHSh39-YXiSPQcL6sjo4At_O')">
+<!-- Gradient Scrim Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<!-- Hero Content -->
+<div class="relative z-10 flex flex-col gap-space-sm mb-space-sm">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded bg-surface-container/90 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Dubai Curation • GCC Specs</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight uppercase">
+          Find the Car That <span class="text-primary italic font-normal">Defines You.</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm line-clamp-2">
+          Curated portfolio of bespoke supercars, verified pre-owned marques, and white-glove doorstep delivery across the Emirates.
+        </p>
+<!-- CTAs -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<a class="h-12 flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-[14px] font-semibold uppercase tracking-wider rounded-lg shadow-md transition-all active:scale-[0.98]" href="#inventory-carousel">
+<span class="material-symbols-outlined text-[18px]">electric_car</span>
+            Collection
+          </a>
+<a class="h-12 flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-[14px] font-medium uppercase tracking-wider rounded-lg shadow-sm transition-all active:scale-[0.98]" href="#test-drive-vip">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+            Test Drive
+          </a>
+</div>
+</div>
+</div>
+<!-- Quick Concierge Search Capsule -->
+<div class="px-margin-mobile -mt-6 relative z-20">
+<div class="bg-surface-container-high/95 backdrop-blur-xl rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span> Precision Search
+          </span>
+<span class="font-label-spec text-[11px] text-on-surface-variant">38 Vehicles Available</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low rounded-lg p-space-xs flex flex-col">
+<span class="font-label-badge text-[9px] uppercase text-on-surface-variant/70">Marque</span>
+<select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface">All Marques</option>
+<option class="bg-surface-container-high text-on-surface">Ferrari</option>
+<option class="bg-surface-container-high text-on-surface">Rolls-Royce</option>
+<option class="bg-surface-container-high text-on-surface">Porsche</option>
+<option class="bg-surface-container-high text-on-surface">Mercedes-AMG</option>
+<option class="bg-surface-container-high text-on-surface">Range Rover</option>
+</select>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-xs flex flex-col">
+<span class="font-label-badge text-[9px] uppercase text-on-surface-variant/70">Budget</span>
+<select class="bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface">Up to AED 3,000,000</option>
+<option class="bg-surface-container-high text-on-surface">AED 300k - 600k</option>
+<option class="bg-surface-container-high text-on-surface">AED 600k - 1.2M</option>
+<option class="bg-surface-container-high text-on-surface">AED 1.2M+</option>
+</select>
+</div>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-headline-sm text-[13px] font-bold tracking-widest uppercase rounded-lg flex items-center justify-center gap-space-xs hover:bg-primary-fixed transition-colors active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]">search</span>
+          Explore Current Vault
+        </button>
+</div>
+</div>
+</section>
+<!-- 2. EXPLORE OUR COLLECTION (SNAP CAROUSEL) -->
+<section class="w-full mt-space-lg flex flex-col" id="inventory-carousel">
+<div class="px-margin-mobile flex items-end justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Dubai Showroom Floor</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Current Stock</h2>
+</div>
+<a class="font-label-spec text-label-spec text-primary flex items-center gap-0.5 hover:underline" href="#">
+        All (38) <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Filter Pills Horizontal Bar -->
+<div class="w-full overflow-x-auto px-margin-mobile flex gap-space-xs pb-space-sm no-scrollbar">
+<button class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge uppercase font-bold shrink-0">All</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase shrink-0">New Arrivals</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase shrink-0">Certified GCC</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase shrink-0">Supercars</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase shrink-0">Luxury SUVs</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge uppercase shrink-0">Electric</button>
+</div>
+<!-- Horizontal Swipe Cards -->
+<div class="w-full overflow-x-auto px-margin-mobile flex gap-space-md pt-space-xs pb-space-md snap-x snap-mandatory">
+<!-- Card 1: Ferrari 296 GTB -->
+<article class="min-w-[290px] max-w-[300px] snap-center bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col shrink-0">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Glossy Rosso Corsa Ferrari 296 GTB hybrid supercar angled profile inside a dark architectural Dubai studio with dramatic rim lighting and golden ambient reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRgay7CwAXKuoCDz3pPob0KkOrFGBrcDv-ToKN04D3sfFSPGgm_WPR6XeKlImfHzqTOMt4u3KkakJ5EpatoVGXr42WnQd0Rc5bh1YpUvIfI-xrOkei5q1R0zsKDc75bABawsMzj0XgT4NkcgEXT0YmFYLTF2dld2uR7yS-vpUxufmTzMZ9FhnzPGwZ-2j0lNDFVYDS_vUqdwdgetaaCCS5tRvT8y0kOknWU_4UhkHnMfuN6NVFZOjv"/>
+<div class="absolute top-2.5 left-2.5 flex gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-badge text-[9px] uppercase font-bold">GCC Spec</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-badge text-[9px] uppercase">Warranty 2027</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm flex-1 justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-widest">2024 Hybrid V6</span>
+<h3 class="font-headline-sm text-[17px] font-semibold text-on-surface leading-snug">Ferrari 296 GTB Fiorano</h3>
+</div>
+<!-- Telemetry Badges -->
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-space-xs rounded-lg text-center">
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">POWER</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">819 HP</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">0-100</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">2.9 s</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">MILEAGE</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">3,100 km</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant">PRICE (EXPORT INCL.)</span>
+<span class="font-label-spec text-[16px] font-bold text-primary">AED 1,450,000</span>
+</div>
+<a class="px-space-sm py-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-headline-sm text-[12px] uppercase font-semibold transition-colors" href="#">
+              Details
+            </a>
+</div>
+</div>
+</article>
+<!-- Card 2: Rolls-Royce Cullinan -->
+<article class="min-w-[290px] max-w-[300px] snap-center bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col shrink-0">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Rolls-Royce Cullinan Series II Black Badge ultra-luxury SUV in stealth dark diamond metallic finish parked against Dubai Marina skyscrapers at night." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAiX_tUrxIhza7j1fYRpCobN_V9OStIv2FZtgHrMD6aYaDhnd2W7fXhqKP7cvGLScEc3sle4mTdr6GA_DCd5Y5x1uVNPptRIhuVJ-j2uLbjH8c22MshKWF2PK0wo3WghzkRA_YiAux4slHUWP1r0Jscc7LpMXrBvXtGasVwwRq9VSeK3ys0TB8IQoWNWlajN_P18J9tyn2XmddJiLao2CNyeUFAiKHctk-148LkmqYVg_o0Ubjo0uk"/>
+<div class="absolute top-2.5 left-2.5 flex gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-badge text-[9px] uppercase font-bold">Black Badge</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-badge text-[9px] uppercase">Service Pack</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm flex-1 justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-widest">2025 V12 Twin-Turbo</span>
+<h3 class="font-headline-sm text-[17px] font-semibold text-on-surface leading-snug">Rolls-Royce Cullinan II</h3>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-space-xs rounded-lg text-center">
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">POWER</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">600 HP</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">TRANS</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">8-Speed</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">MILEAGE</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">1,200 km</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant">PRICE (CASH / LEASE)</span>
+<span class="font-label-spec text-[16px] font-bold text-primary">AED 2,350,000</span>
+</div>
+<a class="px-space-sm py-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-headline-sm text-[12px] uppercase font-semibold transition-colors" href="#">
+              Details
+            </a>
+</div>
+</div>
+</article>
+<!-- Card 3: Mercedes-AMG G 63 Magno -->
+<article class="min-w-[290px] max-w-[300px] snap-center bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col shrink-0">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Matte black Mercedes-AMG G 63 Magno Edition parked on a polished concrete showroom pedestal in Dubai, aggressive stance and golden ambient side LED highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASu9NyVHM7gef2k4D9Fs3M7lqTpZZFxianlzn6DSbA6EUFmCDWo6d2IaRdoQ0WJoFSv2oum_ybooeyptTiSH438V0ruVF6M2VuGgk7TK2Y4tbpewlWnO1niPG87jVngfoyAY_ypwKMxDZVulxiSKyrWmBe5hfBt783UunEQRza37W5XwUIRlAS5tiw4__BbTR6ttJ5MeK2JbfC-1jECA6UBey3wPL-rJE65ONovuFtO5-bPCmw3eA-"/>
+<div class="absolute top-2.5 left-2.5 flex gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-badge text-[9px] uppercase font-bold">GCC Spec</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-badge text-[9px] uppercase">Single Owner</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm flex-1 justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-widest">2024 V8 BiTurbo</span>
+<h3 class="font-headline-sm text-[17px] font-semibold text-on-surface leading-snug">Mercedes-AMG G 63 Magno</h3>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-space-xs rounded-lg text-center">
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">POWER</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">577 HP</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">TORQUE</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">850 Nm</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">MILEAGE</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">12,000 km</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant">PRICE (CERTIFIED)</span>
+<span class="font-label-spec text-[16px] font-bold text-primary">AED 595,000</span>
+</div>
+<a class="px-space-sm py-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-headline-sm text-[12px] uppercase font-semibold transition-colors" href="#">
+              Details
+            </a>
+</div>
+</div>
+</article>
+<!-- Card 4: Porsche 911 Carrera GTS -->
+<article class="min-w-[290px] max-w-[300px] snap-center bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col shrink-0">
+<div class="relative w-full h-44 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A side silhouette view of a stealth satin black Porsche 911 GT3 parked inside a luxury minimalist modern concrete villa garage in Dubai with warm architectural perimeter lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Xs9TGumg2-8vI15RfBdx9g2TBkZjcguli4Sre-E7YyM26IIu8RbQVLjFGa2dG1JSwnr202QotrfiPxUsTa9jjh3nxI0aQpHtc-KYuVmNKP7ugb1f4NNtap2TwLi1GABcJ5Ttp5HhNrzTx7-ndP0rSK7PZK5QgDQgo7fEaANJVoOtj49sTjjYomJtf-yI0QjJOHBBGHw8iQwG3X8cKny_T_qOu44yAA_h8kw8GVHuvQCQlzV2GZce"/>
+<div class="absolute top-2.5 left-2.5 flex gap-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-badge text-[9px] uppercase font-bold">PDK</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-badge text-[9px] uppercase">AeroKit</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm flex-1 justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-widest">2024 Twin-Turbo</span>
+<h3 class="font-headline-sm text-[17px] font-semibold text-on-surface leading-snug">Porsche 911 Carrera GTS</h3>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-space-xs rounded-lg text-center">
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">POWER</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">478 HP</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">0-100</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">3.4 s</span>
+</div>
+<div>
+<span class="font-label-badge text-[9px] text-on-surface-variant block">MILEAGE</span>
+<span class="font-label-spec text-[11px] font-bold text-on-surface">9,200 km</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant">PRICE (GCC SPEC)</span>
+<span class="font-label-spec text-[16px] font-bold text-primary">AED 485,000</span>
+</div>
+<a class="px-space-sm py-2 rounded bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-headline-sm text-[12px] uppercase font-semibold transition-colors" href="#">
+              Details
+            </a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 3. VEHICLE CATEGORIES (2-COLUMN GRID) -->
+<section class="w-full px-margin-mobile mt-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Curated Segments</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Browse by Category</h2>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Category 1 -->
+<a class="relative h-32 rounded-xl overflow-hidden group shadow-md bg-surface-container" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Sleek McLaren hypercar front fascia highlighting aerodynamic carbon fiber winglets in warm luxury showroom studio illumination." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD55DBsJZ3EycsEKbW8d_d9ZsYn_vJ2vH4a7mCg4I0oufRpi2EJlu09oOylhyTBf8anaIgOB1vKQx3SqdGGThBwUjVxD3xk--wYBTLJ-lmPycME5KLN3BKE3AqhIlS8RKM9DzI0_PsFzU0SRbPG4PGVS5Slx1neyqyriciLOtVyrXlCS9MILcqrllDjlln3FwdUT8wRuf4WpY41hYkfXNketvie_UvzIbvQBFRBn1u99l6zPShS_EC0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="relative h-full p-space-sm flex flex-col justify-end">
+<span class="font-headline-sm text-[15px] font-bold uppercase text-on-surface">Supercars</span>
+<span class="font-label-spec text-[10px] text-primary">14 Vehicles →</span>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="relative h-32 rounded-xl overflow-hidden group shadow-md bg-surface-container" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Black Range Rover SV Autobiography side exterior detailing highlighting dark brushed alloy wheels and luxury gloss body panels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC08ijjFc_np-2P4HJe_wrfQ5PRQLI7v8jVK7L4R0RfHSZmD0TLg3oPJkj0gN-WTTM1KAe7-a4o510hHxxDQhyz3DIxONqWeuTnbKT5hLwM_eq-hUfDHetUPr6bTXtUcHv7uT4kEk28nJALgsP8b8WO2tIHh7_5AwubL76_lscwK-hxtzWf0i9zYAWcEWqMzAx5sC4V7vfp-_hqi11jzA_kwCRJ3ZR_bRkuY1QfgCB-C_RH0c7dlRYu')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="relative h-full p-space-sm flex flex-col justify-end">
+<span class="font-headline-sm text-[15px] font-bold uppercase text-on-surface">Luxury SUVs</span>
+<span class="font-label-spec text-[10px] text-primary">12 Vehicles →</span>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="relative h-32 rounded-xl overflow-hidden group shadow-md bg-surface-container" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Bentley Flying Spur luxury saloon in royal midnight blue parked under Dubai architectural spotlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUutWuG-5jRHcLzij3gBavSZew51p3-NTCQ-UnQq6vhVu0bhF6BxhQoF2kO4iCA1YVog8CSpyMPeUcgWc0AKz-fGmKmSwPIsIbZyiM_0RqugwneAJ4xR1AKRxbzgRYYb3t7nB3EH_YxfMcOVM-Z-gpy7WYC2d6NYt2c8SSlE36wqCFFOTLlEn2k_WyZ6ExGG1IOD9v4RK6UTCG2fIsBVFlZjqoyB9j1S6nlhqBvaEOBGfF2zMcDd-S')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="relative h-full p-space-sm flex flex-col justify-end">
+<span class="font-headline-sm text-[15px] font-bold uppercase text-on-surface">Saloon Class</span>
+<span class="font-label-spec text-[10px] text-primary">7 Vehicles →</span>
+</div>
+</a>
+<!-- Category 4 -->
+<a class="relative h-32 rounded-xl overflow-hidden group shadow-md bg-surface-container" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic Rolls-Royce Spectre EV electric coupe with aerodynamic split headlamps in an atmospheric dark architectural studio." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDH1gSWK1HXmnJMQjlw3N5eRBuPUV5xH9zxuzvphxYgHbpt6GvEmhDZLzA_W8rp-h1SJcoXQBGczNB4chZSVhbwqb9fKt0vzINkvWAZhdatymioTpYjJ5rOQPTP0pGBC5OwRb8sEyQjfXzEScTzwVnnpuY6MG0yy7YQpJ9XuTU_6DR1Kxjx3hbAsfiLrNTR_t55CPBtIjPKt5PIE8vVS_kcMvA37d4QOSBHmgKdidq0sWwLlL2umKyq')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="relative h-full p-space-sm flex flex-col justify-end">
+<span class="font-headline-sm text-[15px] font-bold uppercase text-on-surface">EV &amp; Hybrid</span>
+<span class="font-label-spec text-[10px] text-primary">5 Vehicles →</span>
+</div>
+</a>
+</div>
+</section>
+<!-- 4. FEATURED EDITORIAL SPOTLIGHT: PORSCHE 911 / CAYENNE GT -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col">
+<div class="bg-surface-container rounded-2xl overflow-hidden shadow-xl flex flex-col">
+<!-- High-Impact Image Banner -->
+<div class="relative w-full h-64 bg-cover bg-center" data-alt="A profile view of a stealth satin black high-performance Porsche coupe parked inside a minimalist concrete garage with warm linear lighting and luxury aesthetic in Dubai." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBMZhxhXnXXFwk19vrBJA3dYW5j00iDXH9oWhQn-u1qgs7JsuLSLxenR36NmMpH05BRdDFFiT0zeiWgU6iC72jAbmbXC2MQN7pMSBEzeeIl81D1oY0X0dTBNsBCu2TgGhhUEsNb5y13DTOGqOoi-Lst8-pcRN4cCrPu-dWHhjf7E_3uKPbXPIQIadakJfe9IjPKNl5Kdgx7lgEZ4ukZ3UWHSB4v5CLcJFkaYkABVnCj9YLHNJ688eC')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/20 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-2.5 py-1 rounded font-label-badge text-[10px] uppercase font-bold tracking-wider">
+          Curator's Spotlight
+        </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm -mt-6 relative z-10">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-badge text-[11px] text-primary uppercase tracking-widest">2024 Performance Marque</span>
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Porsche 911 GT3 RS</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-spec text-[18px] font-bold text-primary">AED 1,680,000</span>
+<span class="font-label-badge text-[9px] text-on-surface-variant">VAT Included</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Finished in Stealth Satin Black with Weissach Package, carbon-ceramic composite braking system, and zero track usage. Full Dubai dealer warranty through 2028.
+        </p>
+<!-- Metric Bars -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex flex-col items-center">
+<span class="font-label-spec text-[16px] font-bold text-on-surface">518 HP</span>
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">Power Output</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-spec text-[16px] font-bold text-primary">3.2 s</span>
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">0-100 km/h</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-spec text-[16px] font-bold text-on-surface">296 km/h</span>
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">Top Speed</span>
+</div>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<a class="h-12 bg-surface-container-high hover:bg-surface-bright text-on-surface rounded-lg flex items-center justify-center gap-space-xs font-headline-sm text-[13px] uppercase font-semibold transition-colors" href="https://wa.me/97140000000">
+<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+            WhatsApp
+          </a>
+<button class="h-12 bg-primary hover:bg-primary-fixed text-on-primary rounded-lg flex items-center justify-center gap-space-xs font-headline-sm text-[13px] uppercase font-bold tracking-wider transition-colors active:scale-98">
+<span class="material-symbols-outlined text-[18px]">key</span>
+            Reserve Vehicle
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CERTIFIED PRE-OWNED TRUST MATRIX -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">The Vantage Guarantee</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Certified Trust Matrix</h2>
+</div>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Trust Item 1 -->
+<div class="p-space-md bg-surface-container rounded-xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">160-Point Mechanical Audit</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Chassis integrity, dynamometer diagnostics, paint meter depth calibration.</span>
+</div>
+</div>
+<!-- Trust Item 2 -->
+<div class="p-space-md bg-surface-container rounded-xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">history_edu</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">Verified UAE &amp; GCC History</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Single-ownership confirmation with certified agency service passport.</span>
+</div>
+</div>
+<!-- Trust Item 3 -->
+<div class="p-space-md bg-surface-container rounded-xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">UAE Tier-1 Bank Rates</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Preferential APR starting at 2.99% through ENBD, ADCB &amp; FAB partners.</span>
+</div>
+</div>
+<!-- Trust Item 4 -->
+<div class="p-space-md bg-surface-container rounded-xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">VIP Doorstep Delivery</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Enclosed hydraulic transport delivery to your residence across all 7 Emirates.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. INSTANT TRADE-IN VALUATION TOOL -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col">
+<div class="bg-surface-container-high rounded-2xl p-space-lg flex flex-col gap-space-md shadow-xl relative overflow-hidden">
+<!-- Decorative Glow -->
+<div class="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">price_change</span> 60-Second Valuation
+        </span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Sell or Consign Your Marque</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct buyout or luxury consignment at true Dubai market liquidity value.</p>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); document.getElementById('valuation-result').classList.remove('hidden');">
+<div class="grid grid-cols-2 gap-space-xs">
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Make (e.g. Porsche)" required="" type="text"/>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Model (e.g. 911 GT3)" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Year (2018 - 2025)" required="" type="number"/>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Kilometers (km)" required="" type="text"/>
+</div>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="UAE WhatsApp Number (+971)" required="" type="tel"/>
+<button class="h-12 bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-[13px] font-bold uppercase tracking-wider rounded-lg flex items-center justify-center gap-space-xs transition-colors mt-space-xs" type="submit">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+          Get Instant Valuation
+        </button>
+</form>
+<!-- Interactive Micro-Feedback Output -->
+<div class="hidden p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 animate-fade-in" id="valuation-result">
+<span class="font-label-badge text-[10px] uppercase text-primary">Indicative Estimate Generated</span>
+<span class="font-label-spec text-[15px] font-bold text-on-surface">AED 520,000 – AED 565,000</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Our valuation desk has received your vehicle telemetry and will WhatsApp you within 15 minutes.</span>
+</div>
+</div>
+</section>
+<!-- 7. MOBILE PAYMENT & FINANCE ESTIMATOR -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Capital Structuring</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Finance Calculator</h2>
+</div>
+<div class="bg-surface-container rounded-2xl p-space-md flex flex-col gap-space-md shadow-md">
+<!-- Monthly Output Pill -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-on-surface-variant">Estimated Monthly Payment</span>
+<span class="font-label-spec text-[22px] font-bold text-primary" id="calc-monthly">AED 8,620<span class="text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<span class="px-space-xs py-1 rounded bg-primary/10 text-primary font-label-badge text-[10px] font-bold uppercase">2.99% APR</span>
+</div>
+<!-- Sliders -->
+<div class="flex flex-col gap-space-sm">
+<!-- Vehicle Price -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-spec text-label-spec">
+<span class="text-on-surface-variant">Vehicle Price</span>
+<span class="text-on-surface font-bold" id="label-price">AED 500,000</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-low h-2 rounded-lg cursor-pointer" id="range-price" max="2500000" min="200000" step="50000" type="range" value="500000"/>
+</div>
+<!-- Down Payment -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-spec text-label-spec">
+<span class="text-on-surface-variant">Down Payment (20%)</span>
+<span class="text-on-surface font-bold" id="label-down">AED 100,000</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-low h-2 rounded-lg cursor-pointer" id="range-down" max="50" min="10" step="5" type="range" value="20"/>
+</div>
+<!-- Loan Tenure -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-spec text-label-spec">
+<span class="text-on-surface-variant">Tenure</span>
+<span class="text-on-surface font-bold" id="label-tenure">60 Months</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs pt-1">
+<button class="tenure-btn py-1.5 rounded bg-surface-container-low text-on-surface font-label-badge text-[11px]" data-months="24" type="button">24 Mo</button>
+<button class="tenure-btn py-1.5 rounded bg-surface-container-low text-on-surface font-label-badge text-[11px]" data-months="36" type="button">36 Mo</button>
+<button class="tenure-btn py-1.5 rounded bg-surface-container-low text-on-surface font-label-badge text-[11px]" data-months="48" type="button">48 Mo</button>
+<button class="tenure-btn py-1.5 rounded bg-primary text-on-primary font-bold font-label-badge text-[11px]" data-months="60" type="button">60 Mo</button>
+</div>
+</div>
+</div>
+<button class="w-full h-11 bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-[12px] uppercase font-semibold tracking-wider rounded-lg flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+        Apply Pre-Approval Online
+      </button>
+</div>
+</section>
+<!-- 8. VIP TEST DRIVE CALLOUT & EXPERIENCE -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col" id="test-drive-vip">
+<div class="p-space-lg bg-surface-container-low rounded-2xl flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">airline_seat_recline_extra</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-widest">White-Glove Test Experience</span>
+<h3 class="font-headline-sm text-[18px] font-semibold text-on-surface">Book a Private Test Drive</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Experience your desired marque on your terms. We deliver the vehicle with an accredited technical specialist directly to your villa, office, or at our Sheikh Zayed Road lounge.
+      </p>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-body-sm text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Zero Obligation Curated Drive Route</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Emirates ID &amp; Driving License Verification in 3 Mins</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-[12px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Complimentary Espresso &amp; Refreshments</span>
+</div>
+</div>
+<a class="h-12 bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-[13px] font-bold uppercase tracking-wider rounded-lg flex items-center justify-center gap-space-xs transition-colors shadow-md" href="tel:+97140000000">
+<span class="material-symbols-outlined text-[18px]">call</span>
+        Request Test Drive Concierge
+      </a>
+</div>
+</section>
+<!-- 9. CLIENT VOICES (TESTIMONIALS) -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Client Portfolio</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Connoisseur Feedback</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Review 1 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<span class="font-label-badge text-[10px] text-on-surface-variant">Emirates Hills, Dubai</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+          "Acquiring my Cullinan Black Badge through Vantage took under 24 hours. The enclosed carrier arrival to my villa was flawless."
+        </p>
+<span class="font-label-spec text-label-spec font-bold text-on-surface pt-1">Tariq Al Mansoor</span>
+</div>
+<!-- Review 2 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<span class="font-label-badge text-[10px] text-on-surface-variant">DIFC, Dubai</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+          "The most transparent vehicle provenance check in Dubai. Their 160-point dossier gave me absolute confidence in my 911 GT3."
+        </p>
+<span class="font-label-spec text-label-spec font-bold text-on-surface pt-1">Victoria Sterling</span>
+</div>
+</div>
+</section>
+<!-- 10. SHOWROOM LOCATION & VIP CONSULTATION -->
+<section class="w-full px-margin-mobile mt-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Private Lounge</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface uppercase">Visit Our Showroom</h2>
+</div>
+<div class="bg-surface-container rounded-2xl overflow-hidden shadow-xl flex flex-col">
+<!-- Showroom Lounge Photo -->
+<div class="relative w-full h-48 bg-cover bg-center" data-alt="Interior of an ultra-luxury automotive VIP consultation lounge in Dubai featuring plush caramel leather armchairs, round marble coffee table, wooden acoustic paneling, and floor-to-ceiling glass looking out at supercars parked with Dubai skyline view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnOFDedZnb8XuZbUklfqJF3CbXxySjy3W0-2_Xe12Wkua4sKeEW1vAEatKwaxmKSZ_0Ux8Kv0F51mptNGJ0JWQNfKawiSWiN9gpMRTLaEetz6keSlevzlm0HYmhWhu0Jl2rVYqpBquCPxVMGUU7TvIzf3ZX8biyKRkG4xm_VxVkNiHeZfrLVB1mQduzGBrWTs5YxwJdk4gyQ3o3D7RVlraJgscTXpcpk4Jylo1-UaD0cdLojAc2v55')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full text-on-surface font-label-badge text-[10px] uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Showroom Open Today Until 9:00 PM
+        </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-[16px] font-semibold text-on-surface">Vantage Motors Flagship Gallery</span>
+<span class="font-label-spec text-[12px] text-primary">Sheikh Zayed Road, Exit 41, Al Quoz 1, Dubai, UAE</span>
+</div>
+<!-- Embedded Map Location Placeholder -->
+<div class="w-full h-36 bg-surface-container-high rounded-xl flex items-center justify-center relative overflow-hidden shadow-inner" data-location="Sheikh Zayed Road Exit 41 Dubai UAE" style="">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="High contrast stylized dark gray satellite map of Sheikh Zayed Road highway Dubai showing glowing gold pin on Vantage Motors showroom." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCfvP3eO0Mjjb7PPzMe9DoRRO9SI-0Qh4GSM-hgTUQ0WPRIr7h96ww2pEWFJYOQnHKPa2E0NlkA1xeE2_WqE3GaFEJOG6fjjAvYJ8j4Atoxk_x_O2ISZCjeOIJpCHrFE7MysU_EJd9rtpAnDI4CBZ1y5LEngK3Z6RGgP6qW73VjAR9uBkaPcBmAIQC8kXIFNXUxTwJsg0g5wv-om4qKVFrYolChoqpGG0UZlMGR6KNkOtHf4GFUI_6')"></div>
+<a class="relative z-10 px-space-md py-2 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-badge text-label-badge uppercase flex items-center gap-1.5 hover:text-primary transition-colors shadow" href="https://maps.google.com" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span>
+            Open in Google Maps
+          </a>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<a class="h-11 bg-primary text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-headline-sm text-[12px] uppercase font-bold transition-colors" href="https://wa.me/97140000000">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            WhatsApp Lounge
+          </a>
+<a class="h-11 bg-surface-container-high text-on-surface rounded-lg flex items-center justify-center gap-1.5 font-headline-sm text-[12px] uppercase font-semibold transition-colors" href="tel:+97140000000">
+<span class="material-symbols-outlined text-[18px] text-primary">phone_in_talk</span>
+            Private Line
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. QUICK INQUIRY / CONCIERGE DRAWER -->
+<section class="w-full px-margin-mobile mt-space-xl mb-space-md flex flex-col">
+<div class="p-space-lg bg-surface-container-high rounded-2xl flex flex-col gap-space-sm shadow-xl">
+<span class="font-label-badge text-label-badge uppercase tracking-widest text-primary">Direct Inquiries</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">Speak With a Broker</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Have a bespoke specification or looking for an off-market hypercar allocation? Let our acquisitions director assist you.
+      </p>
+<form class="flex flex-col gap-space-xs pt-space-xs" onsubmit="event.preventDefault(); alert('Thank you. A Vantage Private Broker will reach out immediately.');">
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Full Name" required="" type="text"/>
+<input class="h-11 px-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Mobile / WhatsApp (+971)" required="" type="tel"/>
+<textarea class="p-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary resize-none" placeholder="Vehicle of Interest or Target Specification..." rows="2"></textarea>
+<button class="h-12 bg-primary hover:bg-primary-fixed text-on-primary font-headline-sm text-[13px] font-bold uppercase tracking-wider rounded-lg flex items-center justify-center gap-space-xs transition-colors mt-space-xs" type="submit">
+          Submit Private Inquiry
+        </button>
+</form>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Financial Calculator for Mobile Showroom
+  (function() {
+    const priceSlider = document.getElementById('range-price');
+    const downSlider = document.getElementById('range-down');
+    const labelPrice = document.getElementById('label-price');
+    const labelDown = document.getElementById('label-down');
+    const labelTenure = document.getElementById('label-tenure');
+    const calcMonthly = document.getElementById('calc-monthly');
+    const tenureBtns = document.querySelectorAll('.tenure-btn');
+
+    let currentTenure = 60;
+    const aprRate = 0.0299; // 2.99%
+
+    function formatAED(val) {
+      return 'AED ' + Number(val).toLocaleString();
+    }
+
+    function calculatePayment() {
+      if (!priceSlider || !downSlider || !calcMonthly) return;
+      const price = parseFloat(priceSlider.value);
+      const downPercent = parseFloat(downSlider.value) / 100;
+      const downAmount = price * downPercent;
+      const loanAmount = price - downAmount;
+
+      labelPrice.textContent = formatAED(price);
+      labelDown.textContent = formatAED(downAmount) + ` (${downSlider.value}%)`;
+
+      // Monthly interest calculation
+      const monthlyRate = aprRate / 12;
+      const months = currentTenure;
+      const monthlyPmt = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+
+      calcMonthly.innerHTML = formatAED(Math.round(monthlyPmt)) + '<span class="text-body-sm font-normal text-on-surface-variant">/mo</span>';
+    }
+
+    if (priceSlider && downSlider) {
+      priceSlider.addEventListener('input', calculatePayment);
+      downSlider.addEventListener('input', calculatePayment);
+
+      tenureBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tenureBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+            b.classList.add('bg-surface-container-low', 'text-on-surface');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+          btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+          currentTenure = parseInt(btn.dataset.months);
+          labelTenure.textContent = currentTenure + ' Months';
+          calculatePayment();
+        });
+      });
+
+      calculatePayment();
+    }
+  })();
+</script><footer class="w-full bg-surface-container-lowest px-gutter-mobile pt-space-lg pb-28 flex flex-col gap-space-md mt-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)]"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight">VANTAGE MOTORS</span><p class="font-label-spec text-label-spec text-primary">SHEIKH ZAYED ROAD, EXIT 41, DUBAI, UAE</p></div><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span><span>SAT - THU: 09:00 AM - 09:00 PM</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span><span>FRI: 02:00 PM - 09:00 PM</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">call</span><span>+971 4 800 VANTAGE (8268)</span></div></div><div class="flex items-center gap-space-md pt-space-xs"><a class="font-label-badge text-label-badge text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">Instagram</a><a class="font-label-badge text-label-badge text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">YouTube</a><a class="font-label-badge text-label-badge text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest" href="#">LinkedIn</a></div><div class="pt-space-xs flex flex-col gap-space-xs font-label-badge text-[10px] text-on-surface-variant/70"><p>© 2025 VANTAGE MOTORS FZCO. ALL RIGHTS RESERVED.</p><div class="flex items-center gap-space-sm"><a class="hover:underline" href="#">PRIVACY POLICY</a><span>•</span><a class="hover:underline" href="#">TERMS OF CURATION</a></div></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-semibold"><div class="flex justify-between items-center h-16 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-11 transition-colors text-primary font-semibold" data-path="showroom-collection" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-badge text-[10px] tracking-wide uppercase mt-space-xs">Stock</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="inventory-search" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-badge text-[10px] tracking-wide uppercase mt-space-xs">Filter</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="book-test-drive" href="#"><span class="material-symbols-outlined text-[22px]">speed</span><span class="font-label-badge text-[10px] tracking-wide uppercase mt-space-xs">Test Drive</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="concierge-desk" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-badge text-[10px] tracking-wide uppercase mt-space-xs">Concierge</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-primary transition-colors" data-path="client-portfolio" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-badge text-[10px] tracking-wide uppercase mt-space-xs">Vault</span></a></div></nav></body></html>
