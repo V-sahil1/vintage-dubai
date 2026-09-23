@@ -2,12 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
 import { Price, PriceAlt } from "./Currency";
+import Vehicle3DTrigger from "./viewer3d/Vehicle3DTrigger";
 import { whatsappLink } from "@/lib/site";
 import type { Vehicle } from "@/lib/vehicles";
 
+/** Vehicles with a 3D model open the interactive viewer on card click instead of navigating. */
+function withViewer(v: Vehicle, card: React.ReactElement) {
+  if (!v.viewer3d) return card;
+  return (
+    <Vehicle3DTrigger config={v.viewer3d} detailsHref={`/inventory/${v.slug}`}>
+      {card}
+    </Vehicle3DTrigger>
+  );
+}
+
 /** Desktop / tablet inventory card (grid layout). */
 export function VehicleCard({ v }: { v: Vehicle }) {
-  return (
+  return withViewer(
+    v,
     <article className="group flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md hover:shadow-xl transition-all duration-500">
       <Link href={`/inventory/${v.slug}`} className="relative block w-full aspect-[16/10] overflow-hidden bg-surface-container">
         <Image
@@ -82,7 +94,8 @@ export function VehicleCard({ v }: { v: Vehicle }) {
 
 /** Compact mobile carousel card from the mobile showroom design. */
 export function MobileVehicleCard({ v }: { v: Vehicle }) {
-  return (
+  return withViewer(
+    v,
     <article className="min-w-[290px] max-w-[300px] snap-center bg-surface-container rounded-xl overflow-hidden shadow-lg flex flex-col shrink-0">
       <Link href={`/inventory/${v.slug}`} className="relative block w-full h-44 bg-surface-container-high overflow-hidden">
         <Image src={v.altImage ?? v.image} alt={v.name} fill sizes="300px" className="object-cover" />
@@ -127,7 +140,8 @@ export function MobileVehicleCard({ v }: { v: Vehicle }) {
 
 /** Tall cinematic card used by The Luxury Collection. */
 export function LuxuryCard({ v, kicker }: { v: Vehicle; kicker: string }) {
-  return (
+  return withViewer(
+    v,
     <article className="flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-lg group">
       <Link href={`/inventory/${v.slug}`} className="relative block w-full aspect-[4/3] overflow-hidden bg-surface-container">
         <Image

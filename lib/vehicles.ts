@@ -24,6 +24,22 @@ export type Vehicle = {
   details: Spec[];
   features: string[];
   description: string;
+  /** When present, clicking the card opens the interactive 3D viewer instead of navigating. */
+  viewer3d?: Viewer3DConfig;
+};
+
+export type Viewer3DConfig = {
+  /** Path under /public to the .glb/.gltf file. */
+  model: string;
+  /** Label shown at the top of the viewer. */
+  title: string;
+  /** Paint name + hex used for the body-paint material. */
+  paint: { name: string; hex: string };
+  engine: string;
+  /** Real-world overall length in metres; the model is scaled to match. */
+  lengthM: number;
+  /** Optional Y rotation (radians) if the model's nose doesn't face the default camera angle. */
+  modelYaw?: number;
 };
 
 export const vehicles: Vehicle[] = [
@@ -60,6 +76,13 @@ export const vehicles: Vehicle[] = [
     features: ["Meridian Signature Sound", "Dynamic Air Suspension", "Panoramic Roof", "Cabin Air Purification Pro"],
     description:
       "Finished in Santorini Black over Caraway semi-aniline leather, this Autobiography arrives with full agency history and a 1-year Vantage warranty.",
+    viewer3d: {
+      model: "/models/range-rover-sport-autobiography.glb",
+      title: "2025 Range Rover Sport Autobiography",
+      paint: { name: "Santorini Black", hex: "#0b0c0f" },
+      engine: "3.0L Turbo I6",
+      lengthM: 4.946,
+    },
   },
   {
     slug: "mercedes-amg-g63-magno",
